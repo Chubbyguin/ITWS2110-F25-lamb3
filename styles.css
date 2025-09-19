@@ -1,0 +1,140 @@
+@font-face {
+    font-family: "Fasthin";
+    src: url(./Fonts/FasthinRegular-vnj67.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: "Ananda";
+    src: url(./Fonts/AnandaBlackPersonalUseRegular-rg9Rx.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Runtime";
+    src: url(./Fonts/RuntimeRegular-m2Odx.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+body {
+    display:flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    color: #FFFFFF;
+    line-height: 1.6;
+    height: auto;
+    background-image: url("./images/abstract-gradient-neon-lights.jpg");  /* your image path */
+    background-size: cover;      /* make it cover the whole screen */
+    background-repeat: no-repeat;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;            
+    padding: 10px 40px;            
+    border-bottom: 3px solid #492a60;
+}
+
+.navbar a:hover {
+    color: #c66fe8;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 2vw;
+    text-align: center;
+}
+.navbar li {
+    list-style-type: none;
+}
+
+.initials {
+    font-family: "Fasthin";
+    font-size: 4ch;
+}
+
+.about {
+    width: 60vw;
+    background-color: #02000A;
+    border-radius: 5px;
+    box-shadow: 0 8px 30px #492a60;
+    justify-content: center;
+    padding: 10px;
+
+}
+
+.about p {
+    display:flex;
+    width:60%;
+}
+
+.container{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container h1 {
+    font-size: 3ch;
+}
+
+.experience {
+    display: flex;
+    width: 60vw;
+    background-color: #02000A;
+    border-radius: 5px;
+    box-shadow: 0 8px 30px #492a60;
+    justify-content: left;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 20px;;
+}
+
+.experience li {
+    list-style-type: none;
+}
+.experience h2 {
+    margin: 0;
+}
+
+.project {
+    display: flex;
+    width: 60vw;
+    background-color: #02000A;
+    border-radius: 5px;
+    box-shadow: 0 8px 30px #000000;
+    justify-content: left;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 20px;;
+}
+
+.project li {
+    list-style-type: none;
+}
+.project h2 {
+    margin: 0;
+}
+.skills{
+    padding:0;
+}
+.skills h2{
+    text-align: center;
+}
+.skills ul {
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+    padding-left: 0;         
+    margin-left: 0;   
+}
+.skills li{
+    list-style-type: none;
+}
