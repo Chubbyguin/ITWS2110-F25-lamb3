@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather & Fun Facts App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #89f7fe, #66a6ff);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: "Segoe UI", sans-serif;
+      color: #fff;
+      text-align: center;
+    }
+    header {
+      position: absolute;
+      top: 20px;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    .card {
+      background-color: rgba(0, 0, 0, 0.2);
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      padding: 2rem;
+      width: 90%;
+      max-width: 400px;
+    }
+    .temperature {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header id="locationHeader">Getting your location...</header>
+
+  <div class="card text-white">
+    <h3 id="weatherTitle">Loading weather...</h3>
+    <p class="temperature" id="temperature"></p>
+    <p id="description"></p>
+    <hr class="border-light">
+    <h5>💡 Fun Fact</h5>
+    <p id="funFact">Fetching a fun fact...</p>
+  </div>
+
+  <script>
+    const weatherApiKey = "0e8efe1713b119a5d60babad840c086b"; // replace this
+
+    // Get user location
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(success, error);
+    } else {
+      document.getElementById("locationHeader").innerText = "Geolocation not supported.";
+    }
+
+    function success(position) {
+      const lat = position.coords.latitude;
+      const lon = position.coords.longitude;
+
+      // Show coordinates
+      document.getElementById("locationHeader").innerText = `Your location: ${lat.toFixed(2)}, ${lon.toFixed(2)}`;
+
+      // Get weather info
+      getWeather(lat, lon);
+    }
+
+    function error() {
+      document.getElementById("locationHeader").innerText = "Unable to retrieve your location.";
+      // Default to Troy, NY
+      getWeather(42.7284, -73.6918);
+    }
+
+    // Fetch weather data
+    async function getWeather(lat, lon) {
+      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${weatherApiKey}`;
+      const response = await fetch(url);
+      const data = await response.json();
+
+      document.getElementById("weatherTitle").innerText = `${data.name} Weather`;
+      document.getElementById("temperature").innerText = `${Math.round(data.main.temp)}°F`;
+      document.getElementById("description").innerText = data.weather[0].description
+        .split(' ')
+        .map(w => w[0].toUpperCase() + w.slice(1))
+        .join(' ');
+
+      getFunFact();
+    }
+
+    // Fetch fun fact
+    async function getFunFact() {
+      const response = await fetch("https://uselessfacts.jsph.pl/random.json?language=en");
+      const data = await response.json();
+      document.getElementById("funFact").innerText = data.text;
+    }
+  </script>
+
+</body>
+</html>
