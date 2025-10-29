@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="resources/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Lam's Kitchen</h1>
+    </header>
+
+    <main>
+        <section id="menu-section">
+            <h2>Our Menu</h2>
+            <div id="loading">Loading menu...</div>
+            <div id="error" style="display: none;"></div>
+            <table id="menu-table" style="display: none;">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Dish</th>
+                        <th>Description</th>
+                        <th>Cuisine</th>
+                        <th>Category</th>
+                        <th>Ingredients</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="menu-body">
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="resources/js/menu.js"></script>
+</body>
+</html>

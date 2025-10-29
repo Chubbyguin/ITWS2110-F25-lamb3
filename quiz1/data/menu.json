@@ -1,0 +1,104 @@
+{
+  "dishes": [
+    {
+      "name": "Tom Yum Noodle Soup",
+      "description": "Spicy and sour Thai noodle soup with prawns, mushrooms, lemongrass, and kaffir lime leaves in a fragrant broth",
+      "category": "non-vegetarian",
+      "cuisine": "Thai",
+      "image": "resources/img/noodle.jpg",
+      "ingredients": [
+        "Rice noodles",
+        "Prawns",
+        "Straw mushrooms",
+        "Lemongrass",
+        "Galangal",
+        "Kaffir lime leaves",
+        "Thai chilies",
+        "Fish sauce",
+        "Lime juice",
+        "Cilantro"
+      ],
+      "price": "$14.99"
+    },
+    {
+      "name": "Pho",
+      "description": "Traditional Vietnamese beef noodle soup with rice noodles, tender beef slices, and aromatic herbs in a rich bone broth",
+      "category": "non-vegetarian",
+      "cuisine": "Vietnamese",
+      "image": "resources/img/pho.jpg",
+      "ingredients": [
+        "Rice noodles",
+        "Beef brisket",
+        "Beef bones",
+        "Star anise",
+        "Cinnamon",
+        "Ginger",
+        "Onion",
+        "Thai basil",
+        "Bean sprouts",
+        "Lime",
+        "Hoisin sauce"
+      ],
+      "price": "$13.99"
+    },
+    {
+      "name": "Tonkotsu Ramen",
+      "description": "Rich and creamy pork bone broth with tender chashu pork, soft-boiled egg, bamboo shoots, and springy noodles",
+      "category": "non-vegetarian",
+      "cuisine": "Japanese",
+      "image": "resources/img/ramen.jpg",
+      "ingredients": [
+        "Ramen noodles",
+        "Pork bone broth",
+        "Chashu pork",
+        "Soft-boiled egg",
+        "Bamboo shoots",
+        "Nori seaweed",
+        "Green onions",
+        "Sesame seeds",
+        "Black garlic oil"
+      ],
+      "price": "$15.99"
+    },
+    {
+      "name": "Ging Doh Gwut (京都骨)",
+      "description": "Crispy fried pork spare ribs tossed in a sweet and savory Peking-style sauce with garlic and spices",
+      "category": "non-vegetarian",
+      "cuisine": "Cantonese",
+      "image": "resources/img/pork.jpg",
+      "ingredients": [
+        "Pork spare ribs",
+        "Garlic",
+        "Ginger",
+        "Soy sauce",
+        "Hoisin sauce",
+        "Sugar",
+        "Rice wine vinegar",
+        "Cornstarch",
+        "White pepper",
+        "Sesame seeds"
+      ],
+      "price": "$18.99"
+    },
+    {
+      "name": "Mapo Tofu (Vegan)",
+      "description": "Silky tofu cubes in a spicy, numbing Szechuan sauce with fermented black beans, garlic, and green onions",
+      "category": "vegan",
+      "cuisine": "Szechuan",
+      "image": "resources/img/tofu.jpg",
+      "ingredients": [
+        "Soft tofu",
+        "Szechuan peppercorns",
+        "Doubanjiang",
+        "Fermented black beans",
+        "Garlic",
+        "Ginger",
+        "Green onions",
+        "Vegetable broth",
+        "Soy sauce",
+        "Sesame oil"
+      ],
+      "price": "$12.99"
+    }
+  ]
+}

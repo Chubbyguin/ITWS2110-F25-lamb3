@@ -1,0 +1,287 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.tagline {
+    font-size: 1.2rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+#menu-section {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+#menu-section h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 1rem;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 1.5rem;
+}
+
+thead {
+    background: linear-gradient(to right, #34495e, #2c3e50);
+}
+
+thead th {
+    color: white;
+    padding: 1.2rem;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+thead th:first-child {
+    border-top-left-radius: 8px;
+}
+
+thead th:last-child {
+    border-top-right-radius: 8px;
+}
+
+tbody td {
+    padding: 1.5rem 1.2rem;
+    border-bottom: 1px solid #dee2e6;
+    vertical-align: middle;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr {
+    transition: all 0.3s ease;
+}
+
+tbody tr:hover {
+    background-color: #ecf0f1;
+    transform: scale(1.01);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Dish Image */
+.dish-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.dish-image:hover {
+    transform: scale(1.1);
+}
+
+/* Dish Name and Description */
+.dish-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2c3e50;
+    line-height: 1.3;
+}
+
+.dish-description {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Badges */
+.cuisine-badge {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background-color: #3498db;
+    color: white;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.category-badge {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.category-vegetarian {
+    background-color: #27ae60;
+    color: white;
+}
+
+.category-vegan {
+    background-color: #16a085;
+    color: white;
+}
+
+.category-non-vegetarian {
+    background-color: #e67e22;
+    color: white;
+}
+
+/* Ingredients List */
+.ingredients-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ingredients-list li {
+    padding: 0.3rem 0;
+    font-size: 0.9rem;
+    color: #666;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.ingredients-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Price */
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #27ae60;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+    
+    #menu-section {
+        padding: 1.5rem;
+    }
+    
+    .dish-image {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 0 1rem;
+        margin: 2rem auto;
+    }
+    
+    /* Make table responsive - card layout */
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    tr {
+        margin-bottom: 2rem;
+        border: 2px solid #dee2e6;
+        border-radius: 10px;
+        padding: 1rem;
+        background-color: white;
+    }
+    
+    td {
+        border: none;
+        position: relative;
+        padding-left: 45%;
+        text-align: left;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 1rem;
+        font-weight: bold;
+        color: #2c3e50;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+    }
+    
+    td:first-child {
+        padding-left: 1rem;
+        text-align: center;
+    }
+    
+    td:first-child:before {
+        display: none;
+    }
+    
+    .dish-image {
+        width: 100%;
+        max-width: 300px;
+        height: 200px;
+        margin: 0 auto;
+    }
+    
+    .price {
+        text-align: left;
+        margin-left: 45%;
+    }
+}
