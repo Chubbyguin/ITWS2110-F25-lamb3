@@ -53,7 +53,7 @@ OPTION 2: Use the button value attribute more intelligently
  - Different values: value="add", value="subtract", etc.
  - Single check: $_POST['operation'] gives you the operation type directly
   
-OPTION 3: Use a mapping array (Best for this scenario)
+OPTION 3: Use a map
  - Create an associative array mapping button names to class names
  - Loop through or use array_key_exists() to find which button was pressed
  - Example:
